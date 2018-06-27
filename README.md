@@ -1,0 +1,7 @@
+## Directions
+```
+ln -s ~/my_dot_files/bashrc ~/.bashrc
+ln -s ~/my_dot_files/vimrc ~/.vimrc
+ln -s ~/my_dot_files/vim ~/.vim
+ln -s ~/my_dot_files/ctags ~/.ctags
+```
