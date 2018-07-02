@@ -27,16 +27,28 @@ set encoding=utf-8
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set textwidth=80
-"set colorcolumn=+1
-hi ColorColumn ctermbg=blue guibg=lightgrey
 set showmatch
 set autoindent
 set smartindent
 set incsearch
 set hlsearch
-set background=dark
-"colorscheme solarized
+
+" right margin line show
+set textwidth=80
+set colorcolumn=+1
+"hi ColorColumn ctermbg=blue guibg=lightgrey
+
+" color theme configurations
+syntax enable
+set t_Co=256
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+if has('gui_running')
+    set background=dark
+else
+    set background=dark
+endif
+colorscheme solarized
 
 " taglist config
 nnoremap <silent> <F8> :TlistToggle<CR><CR>
