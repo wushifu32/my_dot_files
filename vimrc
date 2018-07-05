@@ -32,6 +32,23 @@ set autoindent
 set smartindent
 set incsearch
 set hlsearch
+set showmatch
+set nobackup
+set tags=tags
+
+" auto add cscope.out
+if has("cscope")
+        set csprg=/usr/bin/cscope
+        set csto=0
+        set cst
+        set nocsverb
+        if filereadable("cscope.out")
+                cs add cscope.out
+        elseif $CSCOPE_DB != ""
+                cs add $CSCOPE_DB
+        endif
+        set csverb
+endif
 
 " right margin line show
 set textwidth=80
@@ -41,8 +58,8 @@ set colorcolumn=+1
 " color theme configurations
 syntax enable
 set t_Co=256
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
 if has('gui_running')
     set background=dark
 else
