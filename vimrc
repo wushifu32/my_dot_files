@@ -35,6 +35,7 @@ set hlsearch
 set showmatch
 set nobackup
 set tags=tags
+set path+=**
 
 " auto add cscope.out
 if has("cscope")
