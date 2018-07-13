@@ -36,6 +36,7 @@ set showmatch
 set nobackup
 set tags=tags
 set path+=**
+set font=Consolas:h12
 
 " auto add cscope.out
 if has("cscope")
