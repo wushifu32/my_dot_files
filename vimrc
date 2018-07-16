@@ -74,3 +74,14 @@ nnoremap <silent> <F8> :TlistToggle<CR><CR>
 let Tlist_Show_One_File=0
 let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close=1
+
+" key mapping
+" default <lender> is '\'
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
+nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
+nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
+nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+nmap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
