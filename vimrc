@@ -36,21 +36,11 @@ set showmatch
 set nobackup
 set tags=tags
 set path+=**
-set font=Consolas:h12
 
-" auto add cscope.out
-if has("cscope")
-        set csprg=/usr/bin/cscope
-        set csto=0
-        set cst
-        set nocsverb
-        if filereadable("cscope.out")
-                cs add cscope.out
-        elseif $CSCOPE_DB != ""
-                cs add $CSCOPE_DB
-        endif
-        set csverb
-endif
+" cscope
+cs add cscope.out
+" enable quickfix
+set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 " right margin line show
 set textwidth=80
@@ -64,6 +54,7 @@ set t_Co=256
 "let g:solarized_termcolors=256
 if has('gui_running')
     set background=dark
+    set guifont=Consolas:h12
 else
     set background=dark
 endif
