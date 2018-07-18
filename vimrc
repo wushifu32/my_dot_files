@@ -40,7 +40,7 @@ set path+=**
 " cscope
 cs add cscope.out
 " enable quickfix
-set cscopequickfix=s-,c-,d-,i-,t-,e-
+set cscopequickfix=s-,c-,d-,i-,t-,e-,-g
 
 " right margin line show
 set textwidth=80
@@ -74,5 +74,7 @@ nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
 nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
 nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
-nmap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+nmap <F4> :cnext <CR>
+nmap <F3> :cprev <CR>
