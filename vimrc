@@ -36,6 +36,7 @@ set showmatch
 set nobackup
 set tags=tags
 set path+=**
+set foldmethod=syntax
 
 " cscope
 cs add cscope.out
