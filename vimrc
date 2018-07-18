@@ -37,6 +37,7 @@ set nobackup
 set tags=tags
 set path+=**
 set foldmethod=syntax
+set foldlevelstart=99
 
 " cscope
 cs add cscope.out
