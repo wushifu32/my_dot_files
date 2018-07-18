@@ -78,3 +78,5 @@ nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 nmap <F4> :cnext <CR>
 nmap <F3> :cprev <CR>
+nmap <F5> :tprev <CR>
+nmap <F6> :tnext <CR>
