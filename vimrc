@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'git@github.com:vim-scripts/taglist.vim.git'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+Plugin 'git@github.com:davidhalter/jedi-vim.git'
 " call :FixWhitespace to fix trailing whitespace
 Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
 call vundle#end()
