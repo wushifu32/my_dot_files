@@ -64,6 +64,7 @@ endif
 colorscheme solarized
 
 " taglist config
+filetype on
 nnoremap <silent> <F8> :TlistToggle<CR><CR>
 let Tlist_Show_One_File=0
 let Tlist_Exit_OnlyWindow=1
