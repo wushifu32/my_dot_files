@@ -43,7 +43,7 @@ set foldlevelstart=99
 " cscope
 cs add cscope.out
 " enable quickfix
-set cscopequickfix=s-,c-,d-,i-,t-,e-,-g
+set cscopequickfix=s-,c-,d-,i-,t-,e-,g-
 
 " right margin line show
 set textwidth=80
