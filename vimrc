@@ -84,3 +84,4 @@ nmap <F4> :cnext <CR>
 nmap <F3> :cprev <CR>
 nmap <F5> :tprev <CR>
 nmap <F6> :tnext <CR>
+nmap <leader>b :<C-u>call gitblame#echo()<CR>
