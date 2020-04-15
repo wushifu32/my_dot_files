@@ -5,11 +5,17 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git@github.com:vim-scripts/taglist.vim.git'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
-Plugin 'git@github.com:davidhalter/jedi-vim.git'
+"Plugin 'git@github.com:vim-scripts/taglist.vim.git'
+"Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+"Plugin 'git@github.com:davidhalter/jedi-vim.git'
 " call :FixWhitespace to fix trailing whitespace
-Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
+"Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/LeaderF'
+Plugin 'bling/vim-airline'
+Plugin 'zivyangll/git-blame.vim'
 call vundle#end()
 filetype plugin indent on
 " Brief help
@@ -77,7 +83,7 @@ nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
 nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
 nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+"nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
 nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 nmap <F4> :cnext <CR>
@@ -85,3 +91,4 @@ nmap <F3> :cprev <CR>
 nmap <F5> :tprev <CR>
 nmap <F6> :tnext <CR>
 nmap <leader>b :<C-u>call gitblame#echo()<CR>
+nmap <leader>f :CtrlP <CR>
