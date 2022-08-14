@@ -12,15 +12,11 @@ Plugin 'git@github.com:tpope/vim-fugitive.git'
 Plugin 'zivyangll/git-blame.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'Yggdroot/LeaderF'
 " call :FixWhitespace to fix trailing whitespace
 "Plugin 'git@github.com:bronson/vim-trailing-whitespace.git'
-Plugin 'tpope/vim-fugitive'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'kien/ctrlp.vim'
 Plugin 'Yggdroot/LeaderF'
-Plugin 'bling/vim-airline'
-Plugin 'zivyangll/git-blame.vim'
 call vundle#end()
 filetype plugin indent on
 " Brief help
