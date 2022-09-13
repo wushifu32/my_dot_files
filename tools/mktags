@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [[ $@ > 0 ]]; then
+	tag_files=$1
+	cat $tag_files | xargs -i find $(pwd)/{} -name "*.[chS]" > cscope.files
+	ctags `cat cscope.files`
+	cscope -bkq -f cscope.out
+	rm cscope.files
+	exit 0
+fi
+
+ctags -R && cscope -Rbkq
