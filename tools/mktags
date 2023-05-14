@@ -1,12 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 
-if [[ $@ > 0 ]]; then
-	tag_files=$1
-	cat $tag_files | xargs -i find $(pwd)/{} -name "*.[chS]" > cscope.files
-	ctags `cat cscope.files`
-	cscope -bkq -f cscope.out
-	rm cscope.files
-	exit 0
+if [ $# -lt 1 ]; then
+	echo usage: $0 file_list
+	exit -1
 fi
 
-ctags -R && cscope -Rbkq
+if [ -f cscope.files ]; then
+	rm cscope.files
+fi
+
+tag_files=$1
+IFS=$'\n'
+for line in `cat $tag_files`
+do
+	IFS=$' '
+	find $line -name "*.[chS]" >> cscope.files
+done
+
+ctags -L cscope.files
+cscope -bkq -f cscope.out
+exit 0
