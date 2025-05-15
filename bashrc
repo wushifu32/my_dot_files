@@ -15,3 +15,7 @@ xmodmap $HOME/my_dot_files/xmodmap
 eval `dircolors ~/.dir_colors`
 
 export PATH="$HOME/my_dot_files/tools:$PATH"
+
+disassemble() {
+  gdb --batch --eval-command="disassemble $1" --args ./vmlinux > ./$1.dump
+}
